@@ -15,7 +15,7 @@ namespace Chessington.GameEngine.Pieces
             Square currentPosition = board.FindPiece(this);
             var availableSquares = new List<Square>();
 
-            //moving rook to right 
+            //moving rook  horizontally 
             for (var i = 0; i < 8; i++)
             {
                 newPosition = Square.At(currentPosition.Row, i);
@@ -25,8 +25,8 @@ namespace Chessington.GameEngine.Pieces
                 }
                
             }
-
-
+            
+            //moving rook vertically
             for (var i = 0; i < 8; i++)
             {
                 newPosition = Square.At(i , currentPosition.Col);
